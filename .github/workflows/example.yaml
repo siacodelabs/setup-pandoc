@@ -5,13 +5,9 @@ on: workflow_dispatch
 permissions:
   contents: write
 
-env:
-  node-version: 18.x
-  os: ubuntu-latest
-
 jobs:
   call:
-    runs-on: ${{ env.os }}
+    runs-on: ubuntu-latest
 
     steps:
       - name: Set up Pandoc

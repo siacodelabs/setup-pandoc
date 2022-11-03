@@ -8,12 +8,9 @@ on:
 permissions:
   contents: write
 
-env:
-  os: ubuntu-latest
-
 jobs:
   test:
-    runs-on: ${{ env.os }}
+    runs-on: ubuntu-latest
 
     steps:
       - name: Clone repository
