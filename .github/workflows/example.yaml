@@ -1,0 +1,21 @@
+name: Example
+
+on: workflow_dispatch
+
+permissions:
+  contents: write
+
+env:
+  node-version: 18.x
+  os: ubuntu-latest
+
+jobs:
+  call:
+    runs-on: ${{ env.os }}
+
+    steps:
+      - name: Set up Pandoc
+        uses: siacodelabs/setup-pandoc@v1
+      
+      - name: Check installation
+        run: pandoc --version

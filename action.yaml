@@ -1,0 +1,16 @@
+name: Setup Pandoc Document Converter
+description: Set up Pandoc.
+author: Sia Codelabs
+
+branding:
+  icon: play-circle
+  color: gray-dark
+
+runs:
+  using: composite
+  steps:
+    - name: Install Pandoc
+      shell: bash
+      run: |
+        sudo apt update
+        sudo apt install pandoc
