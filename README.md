@@ -12,4 +12,6 @@ See [action.yaml](action.yaml).
 steps:
   - name: Set up Pandoc
     uses: siacodelabs/setup-pandoc@v1
+    with:
+      xelatex: true
 ```

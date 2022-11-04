@@ -6,6 +6,11 @@ branding:
   icon: play-circle
   color: gray-dark
 
+inputs:
+  xelatex:
+    description: Set if to install XeLaTeX.
+    default: "false"
+
 runs:
   using: composite
   steps:
@@ -13,4 +18,10 @@ runs:
       shell: bash
       run: |
         sudo apt update
-        sudo apt install pandoc
+        sudo apt install -y pandoc
+
+    - name: Install XeLaTeX if required
+      if: inputs.xelatex
+      shell: bash
+      run: |
+        sudo apt install -y texlive-xetex
